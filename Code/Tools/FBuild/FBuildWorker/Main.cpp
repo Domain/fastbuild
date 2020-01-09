@@ -95,7 +95,7 @@ int Main( const AString & args )
         // retry for upto 2 seconds, to allow some time for old worker to close
         if ( t.GetElapsed() > 5.0f )
         {
-            Env::ShowMsgBox( "FBuildWorker", "An FBuildWorker is already running!" );
+            //ShowMsgBox( "An FBuildWorker is already running!" );
             return -1;
         }
         Thread::Sleep( 100 );
