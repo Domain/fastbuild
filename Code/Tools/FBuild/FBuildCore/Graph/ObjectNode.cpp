@@ -2480,7 +2480,7 @@ bool ObjectNode::CompileHelper::SpawnCompiler( Job * job,
 /*static*/ void ObjectNode::HandleSystemFailures( Job * job, int result, const char * stdOut, const char * stdErr )
 {
     // Only remote compilation has special cases. We don't touch local failures.
-    if ( job->IsLocal() )
+    if ( job->IsLocal() && !FBuild::Get().GetOptions().m_AllowDistributed)
     {
         return;
     }
