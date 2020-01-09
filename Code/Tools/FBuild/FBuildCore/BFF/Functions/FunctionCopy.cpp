@@ -148,11 +148,11 @@ FunctionCopy::FunctionCopy()
         }
 
         // check node doesn't already exist
-        if ( nodeGraph.FindNode( dst ) )
+        /*if ( nodeGraph.FindNode( dst ) )
         {
             Error::Error_1100_AlreadyDefined( funcStartIter, this, dst );
             return false;
-        }
+        }*/
 
         // create our node
         CopyFileNode * copyFileNode = nodeGraph.CreateCopyFileNode( dst );
