@@ -570,6 +570,10 @@ void VSProjectGenerator::GetFolderPath( const AString & fileName, AString & fold
                 folder.Assign( begin, end );
                 return;
             }
+            if ( begin == end + 1 )
+            {
+                break;
+            }
         }
     }
 
